@@ -957,74 +957,74 @@ var recipes = [
         new Material("Ancient vis", 20),
     ], "Zarosian VII"),
     // Daemonheim digsite
-    new Recipe("Castle Gatestone", 73, 5366.7, [
+    new Recipe("Castle gatestone", 73, 5366.7, [
         new Material("Orgone", 36),
         new Material("Orthenglass", 32),
     ], "Dragonkin V"),
-    new Recipe("Engraved Ring of Kinship", 73, 5366.7, [
+    new Recipe("Engraved ring of kinship", 73, 5366.7, [
         new Material("Goldrune", 28),
-        new Material("Dragon Metal", 40),
+        new Material("Dragon metal", 40),
     ], "Dragonkin V"),
-    new Recipe("Exploratory Totem", 77, 6300, [
-        new Material("Dragon Metal", 34),
-        new Material("Compass Rose", 36),
+    new Recipe("Exploratory totem", 77, 6300, [
+        new Material("Dragon metal", 34),
+        new Material("Compass rose", 36),
     ], "Dragonkin V"),
-    new Recipe("Excavator Portal Mine", 77, 6300, [
+    new Recipe("Excavator portal mine", 77, 6300, [
         new Material("Orgone", 36),
         new Material("Orthenglass", 34),
     ], "Dragonkin V"),
-    new Recipe("Storage Totem", 78, 6533.3, [
-        new Material("Dragon Metal", 36),
-        new Material("Compass Rose", 34),
+    new Recipe("Storage totem", 78, 6533.3, [
+        new Material("Dragon metal", 36),
+        new Material("Compass rose", 34),
     ], "Dragonkin VI"),
-    new Recipe("Plant Seed Satchel", 78, 6533.3, [
+    new Recipe("Plant seed satchel", 78, 6533.3, [
         new Material("Felt", 28),
-        new Material("Carbon Black", 28),
-        new Material("Compass Rose", 14),
+        new Material("Carbon black", 28),
+        new Material("Compass rose", 14),
     ], "Dragonkin VI"),
-    new Recipe("Snuff Box", 78, 6533.3, [
+    new Recipe("Snuff box", 78, 6533.3, [
         new Material("Soapstone", 20),
-        new Material("Carbon Black", 30),
+        new Material("Carbon black", 30),
         new Material("Felt", 20),
     ], "Dragonkin VI"),
-    new Recipe("Spent Summoning Charm", 87, 9722.2, [
+    new Recipe("Spent summoning charm", 87, 9722.2, [
         new Material("Orgone", 46),
         new Material("Felt", 30),
     ], "Dragonkin VI"),
-    new Recipe("'Friendship Bracelet'", 87, 9722.2, [
+    new Recipe("'Friendship bracelet'", 87, 9722.2, [
         new Material("Soapstone", 30),
         new Material("Felt", 46),
     ], "Dragonkin VI"),
-    new Recipe("Homely Totem", 87, 9722.2, [
+    new Recipe("Homely totem", 87, 9722.2, [
         new Material("Soapstone", 36),
         new Material("Felt", 40),
     ], "Dragonkin VI"),
-    new Recipe("Projection Attuner", 103, 22166.7, [
+    new Recipe("Projection attuner", 103, 22166.7, [
         new Material("Goldrune", 28),
         new Material("Orthenglass", 28),
-        new Material("Dragon Metal", 40),
+        new Material("Dragon metal", 40),
     ], "Dragonkin VII"),
-    new Recipe("Golden Projection 'Needle'", 103, 22166.7, [
+    new Recipe("Golden projection 'needle'", 103, 22166.7, [
         new Material("Goldrune", 36),
-        new Material("Dragon Metal", 60),
+        new Material("Dragon metal", 60),
     ], "Dragonkin VII"),
-    new Recipe("Comfort Gatestone", 107, 27000, [
+    new Recipe("Comfort gatestone", 107, 27000, [
         new Material("Orthenglass", 40),
         new Material("Orgone", 34),
-        new Material("Compass Rose", 30),
+        new Material("Compass rose", 30),
     ], "Dragonkin VII"),
-    new Recipe("Halak's Cube", 107, 27000, [
-        new Material("Compass Rose", 36),
-        new Material("Carbon Black", 40),
+    new Recipe("Halak's cube", 107, 27000, [
+        new Material("Compass rose", 36),
+        new Material("Carbon black", 40),
         new Material("Orgone", 28),
     ], "Dragonkin VII"),
-    new Recipe("Portable Portal Generator", 113, 35000, [
-        new Material("Dragon Metal", 50),
+    new Recipe("Portable portal generator", 113, 35000, [
+        new Material("Dragon metal", 50),
         new Material("Orthenglass", 36),
         new Material("Goldrune", 34),
     ], "Dragonkin VII"),
-    new Recipe("Warped Trinket", 113, 35000, [
-        new Material("Dragon Metal", 30),
+    new Recipe("Warped trinket", 113, 35000, [
+        new Material("Dragon metal", 30),
         new Material("Orthenglass", 30),
         new Material("Soapstone", 30),
         new Material("Goldrune", 30),
