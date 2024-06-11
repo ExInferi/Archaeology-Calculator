@@ -859,7 +859,7 @@ var recipes = [
     ], "Dragonkin IV"),
 
     //sennisten digsite
-    new Recipe("Apex Cap", 60, 2333.3, [
+    new Recipe("Apex cap", 60, 2333.3, [
         new Material("Samite silk", 28),
         new Material("Leather scraps", 12),
         new Material("Ancient vis", 20),
@@ -948,7 +948,7 @@ var recipes = [
     new Recipe("Model chariot", 67, 3966.7, [
         new Material("Vellum", 12),
         new Material("Imperial steel", 18),
-        new Material("Goldrune", 20	),
+        new Material("Goldrune", 20),
         new Material("Zarosian insignia", 14),
     ], "Zarosian VII"),
     new Recipe("Funerary urn of miasma", 67, 3966.7, [

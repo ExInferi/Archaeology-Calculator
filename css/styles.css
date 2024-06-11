@@ -1,90 +1,98 @@
 body {
-    margin:0;
-    padding:0;
-    position:relative;
+    margin: 0;
+    padding: 0;
+    position: relative;
     font-family: "Arial", sans-serif;
     background: #1c1c1c;
 }
 
 #main {
-    width:50%;
-    margin:0 auto;
-    background:#1C1C1C;
-    color:#FFF;
+    width: 50%;
+    margin: 0 auto;
+    background: #1C1C1C;
+    color: #FFF;
 }
 
-    #artefacts, #materials {
-        display:table;
-        width:100%;
-    }
+#navbar {
+    display: none;
+}
 
-        .artefactlistheader, .materiallistheader {
-            display:table-row;
-            font-weight: bold;
-        }
+#artefacts,
+#materials {
+    display: table;
+    width: 100%;
+}
 
-        .artefact, .material {
-            display:table-row;
-        }
+.artefactlistheader,
+.materiallistheader {
+    display: table-row;
+    font-weight: bold;
+}
 
-            .artefactinput, .restoredinput {
-                width:50%;
-            }
+.artefact,
+.material {
+    display: table-row;
+}
 
-        .cell {
-            display:table-cell;
-            width:10%;
-            outline:thin solid #CCC;
-            padding:4px;
-            vertical-align:middle;
-            position:relative;
-        }
+.artefactinput,
+.restoredinput {
+    width: 50%;
+}
 
-            .cell .mats {
-                float:right;
-            }
+.cell {
+    display: table-cell;
+    width: 10%;
+    outline: thin solid #CCC;
+    padding: 4px;
+    vertical-align: middle;
+    position: relative;
+}
 
-                .material .cell div {
-                    width:25px;
-                    text-align:center;
-                    display:inline-block;
-                }
+.cell .mats {
+    float: right;
+}
 
-                    .material .cell div img {
-                        height:15px;
-                    }
+.material .cell div {
+    width: 25px;
+    text-align: center;
+    display: inline-block;
+}
 
-                .artefact .cell .mats img {
-                    height:17px;
-                    margin:0 2px;
-                    vertical-align: middle;
-                }
+.material .cell div img {
+    height: 15px;
+}
 
-        .artefact .cell:first-child {
-            width:30%;
-        }
+.artefact .cell .mats img {
+    height: 17px;
+    margin: 0 2px;
+    vertical-align: middle;
+}
+
+.artefact .cell:first-child {
+    width: 30%;
+}
 
 #sidebar {
-    width:20%;
+    width: 20%;
     position: fixed;
-    right:0;
-    top:0;
-    color:#1C1C1C;
-    background:#AAA;
+    right: 0;
+    top: 0;
+    color: #1C1C1C;
+    background: #AAA;
     overflow: auto;
-    height:100%;
+    height: 100%;
 }
 
 #leftsidebar {
-    width:20%;
+    width: 20%;
     position: fixed;
-    left:0;
-    top:0;
-    bottom:0;
-    color:#1C1C1C;
-    background:#AAA;
-    display:flex;
-    flex-direction:column;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    color: #1C1C1C;
+    background: #AAA;
+    display: flex;
+    flex-direction: column;
 }
 
 .Zamorakian {
@@ -111,147 +119,176 @@ body {
     background-color: #494343;
 }
 
-#statform {
-    padding:10px;
+#statform,
+#rsnLookup {
+    padding: 10px;
 }
 
-#expInput {
-    width:100px;
+#expInput,
+#rsn {
+    width: 100px;
 }
 
-#potentialXPGain, #endXP, #endLvl {
-    display:block;
+.statBox {
     margin: 10px auto;
-    text-align:center;
+    text-align: center;
+}
+#potentialXPGain,
+#endXP,
+#endLvl {
+    display: block;
+}
+#maxXP {
+		color: #aa0000;
+		display: none;
 }
 
 .minForCollections {
-    background:#AAA;
-    display:inline-block;
-    color:#1C1C1C;
-    width:15px;
-    height:15px;
-    text-align:center;
+    background: #AAA;
+    display: inline-block;
+    color: #1C1C1C;
+    width: 15px;
+    height: 15px;
+    text-align: center;
     padding: 3px;
-    border-radius:2px;
-    margin-left:5px;
+    border-radius: 2px;
+    margin-left: 5px;
     cursor: pointer;
-    font-size:14px;
+    font-size: 14px;
 }
 
 .minForCollections:not(.complete):hover {
-    background-color:#BBB;
+    background-color: #BBB;
 }
 
 .complete {
-    background-color:#00bf29c9;
+    background-color: #00bf29c9;
 }
 
 
-#statform label.inline, #statform input, #yourLevel {
-    display:inline-block;
-    width:30%;
-    text-align:center;
+#statform label.inline,
+#statform input,
+#yourLevel {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+#rsnLookup label.inline,
+#rsnLookup input,
+#rsnConfirm {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+#rsnConfirm {
+    margin: 0 1em;
+    width: fit-content;
+}
+
+#output {
+    padding: 0 10px;
+    margin: 0;
+    text-align: center;
 }
 
 .outfitbox {
-    text-align:center;
-    margin-top:10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
-    .outfitbox input {
-        width:auto !important;
-    }
-
-.highlight {
-
+.outfitbox input {
+    width: auto !important;
 }
+
+.highlight {}
 
 #collections {
-    margin-top:10px;
-    padding:10px;
-    overflow-y:auto;
-    flex:auto;
+    margin-top: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    flex: auto;
 }
 
 .collectionCategory {
-    background:#BBB;
+    background: #BBB;
 }
 
 .collectionCategoryHeader {
-    display:block;
-    padding:3px;
-    background:#1c1c1c;
-    color:white;
+    display: block;
+    padding: 3px;
+    background: #1c1c1c;
+    color: white;
 }
 
 .collection {
-    padding:5px;
-    border-bottom:thin solid #1c1c1c;
-    cursor:pointer;
+    padding: 5px;
+    border-bottom: thin solid #1c1c1c;
+    cursor: pointer;
 }
 
 .collection:not(.complete):hover {
-    background-color:#CCC;
+    background-color: #CCC;
 }
 
 .collectionViewer {
-    float:right;
-    cursor:pointer;
-    font-size:20px;
-    margin-top:-6px;
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: -6px;
 }
 
 .unneeded {
-    background-color:#00bf29c9;
+    background-color: #00bf29c9;
     text-decoration: line-through;
 }
 
 #blinder {
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background: rgba(0,0,0, 0.6);
-    display:none;
-    overflow:auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    overflow: auto;
 }
 
 #popup {
     background: #AAA;
-    position:fixed;
-    top:50%;
-    left:50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     transform: translateX(-50%) translateY(calc(-50%));
-    border:thin solid #CCC;
-    border-radius:10px;
+    border: thin solid #CCC;
+    border-radius: 10px;
     overflow: auto;
 }
 
 #materialStorage {
-    display:grid;
+    display: grid;
     grid-template-columns: 195px 195px 195px 195px 195px;
-    font-size:14px;
+    font-size: 14px;
 }
 
 #popup span {
-    display:block;
-    text-align:center;
+    display: block;
+    text-align: center;
     font-weight: bold;
-    font-size:24px;
-    padding:10px;
+    font-size: 24px;
+    padding: 10px;
 }
 
 #popup .popupMaterial {
-    padding:10px;
-    outline:thin solid #CCC;
+    padding: 10px;
+    outline: thin solid #CCC;
 }
 
 #popup .popupMaterial div:not([class]) {
-    display:inline-block;
-    text-align:center;
-    width:40px;
+    display: inline-block;
+    text-align: center;
+    width: 40px;
 }
 
 #popup .popupMaterial img {
@@ -259,24 +296,24 @@ body {
 }
 
 #popup .popupMaterial .materialStorageInput {
-    display:inline-block;
+    display: inline-block;
 }
 
 #popup .popupMaterial .materialStorageInput input {
-    display:block;
-    width:50px;
+    display: block;
+    width: 50px;
 }
 
 #popup .popupSave {
-    text-align:center;
-    padding:10px;
+    text-align: center;
+    padding: 10px;
 }
 
 #showMaterialStorage {
-    display:block;
-    text-align:center;
-    margin:10px;
-    font-size:20px;
+    display: block;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
 }
 
 .seperator {
@@ -288,24 +325,30 @@ body {
 }
 
 .artefact .cell img {
-    height:20px;
+    height: 20px;
     vertical-align: middle;
 }
 
 .artefact .cell div.artefactImg {
-    display:inline-block;
-    width:30px;
-    text-align:center;
+    display: inline-block;
+    width: 30px;
+    text-align: center;
 }
 
 .artefactName:hover {
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .material {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .material:not(.unneeded):hover {
-    background-color:#BBB;
+    background-color: #BBB;
+}
+
+@media screen and (max-width: 2200px) {
+    #artefacts {
+        font-size: 0.9rem;
+    }
 }

@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archaeology Calculator</title>
 
-    <link rel="icon" href="img/Archaeology.webp"/>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="icon" href="img/Archaeology.webp" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/mobile.css">
 
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/recipes.js"></script>
     <script src="js/collections.js"></script>
     <script src="js/page.js"></script>
 </head>
+
 <body>
     <div id="main">
         <div id="artefacts">
@@ -43,25 +48,32 @@
     </div>
 
     <div id="leftsidebar">
+        <div id="rsnLookup">
+            <label for="rsn" class="inline">RSN:</label>
+            <input name="rsn" id="rsn" data-id="rsn">
+            <button id="rsnConfirm" onClick="rsnConfirm()">Look up</button>
+        </div>
+        <p id="output"></p>
         <div id="statform">
             <label for="expInput" class="inline">Current XP:</label>
-            <input type="number" name="expInput" id="expInput" value="0" data-id="expInput"/>
+            <input type="number" name="expInput" id="expInput" value="0" max="200000000" data-id="expInput" />
 
-            <span id="yourLevel">Level 1</span>
-
-            <div class="outfitbox">
-                <label for="outfit">Archaeologist Outfit: </label>
-                <input name="outfit" id="outfit" type="checkbox" data-id="outfit">
-            </div>
-
-            <span id="potentialXPGain">Total Potential XP: 0</span>
-
-            <span id="endXP">Ending XP: 0</span>
-            <span id="endLvl">Ending Lvl: 1</span>
+            <span id="yourLevel">Level: 1</span>
+					<div class="statBox"><strong>XP Calculator:</strong></div>
+						<span id="maxXP" class="statBox">No more XP to gain for you.</span>
+						<div id="gains">
+							<div class="outfitbox">
+									<label for="outfit">Archaeologist Outfit: </label>
+									<input name="outfit" id="outfit" type="checkbox" data-id="outfit">
+							</div>
+							<span id="potentialXPGain" class="statBox">Total Potential XP: 0</span>
+							<span id="endXP" class="statBox">Ending XP: 0</span>
+							<span id="endLvl" class="statBox">Ending Level: 1</span>
+							</div>
         </div>
 
         <div style="text-align: center;">
-            <button id="reset">Reset artefact counts</button>
+            <button id="reset" onClick="reset()">Reset artefact counts</button>
         </div>
 
         <div style="text-align: center; margin-top: 10px;">
@@ -73,7 +85,6 @@
 
         </div>
     </div>
-
     <div id="blinder">
         <div id="popup">
             <span>Material Storage</span>
@@ -86,5 +97,7 @@
             </div>
         </div>
     </div>
+
 </body>
+
 </html>
