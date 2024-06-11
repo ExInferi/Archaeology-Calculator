@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var xp = parseInt($(this).val());
         var lvl = 1;
 
-        for (i = 0; i < levels.length; i++) {
+        for (let i = 0; i < levels.length; i++) {
             if (xp >= levels[i] && xp < levels[i + 1]) {
                 lvl = i + 1;
             }
@@ -358,7 +358,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (str.indexOf("digsite:") > -1) {
             console.log("Searching digsites");
             if (str.indexOf("zaros") > -1) {
-                for (i in recipes) {
+                for (let i in recipes) {
                     var recipe = recipes[i];
 
                     if (recipe.alignment.indexOf("Zarosian") > -1) {
@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 }
             } else if (str.indexOf("zamorak") > -1) {
-                for (i in recipes) {
+                for (let i in recipes) {
                     var recipe = recipes[i];
 
                     if (recipe.alignment.indexOf("Zamorakian") > -1) {
@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 }
             } else if (str.indexOf("saradomin") > -1) {
-                for (i in recipes) {
+                for (let i in recipes) {
                     var recipe = recipes[i];
 
                     if (recipe.alignment.indexOf("Saradominist") > -1) {
@@ -385,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 }
             } else if (str.indexOf("armadyl") > -1) {
-                for (i in recipes) {
+                for (let i in recipes) {
                     var recipe = recipes[i];
 
                     if (recipe.alignment.indexOf("Armadylean") > -1) {
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     }
                 }
             } else if (str.indexOf("bandos") > -1) {
-                for (i in recipes) {
+                for (let i in recipes) {
                     var recipe = recipes[i];
 
                     if (recipe.alignment.indexOf("Bandosian") > -1) {
@@ -450,8 +450,7 @@ function calculateTotalMaterials() {
         var recipe = getRecipeByArtefact(artefact);
 
         if (numToMake > 0) {
-            var runningTotal = 0;
-            for (i = 0; i < recipe.mats.length; i++) {
+            for (let i = 0; i < recipe.mats.length; i++) {
                 var mat = recipe.mats[i].name;
                 var numRequired = recipe.mats[i].numRequired;
 
@@ -525,7 +524,7 @@ function calculateTotalPotentialXP() {
 
     var lvl = 1;
 
-    for (i = 0; i < levels.length; i++) {
+    for (let i = 0; i < levels.length; i++) {
         if (xp >= levels[i] && xp < levels[i + 1]) {
             lvl = i + 1;
         }
@@ -546,6 +545,7 @@ function calculateTotalPotentialXP() {
     } else {
         $("#endLvl").text("Ending Level: " + lvl + " (" + numberWithCommas(parseInt(remainingXP)) + " to " + parseInt(lvl + 1) + ")");
     };
+
 
 
 };
@@ -655,7 +655,7 @@ function loadData() {
     if (localStorage.getItem("data") !== null) {
         var data = JSON.parse(localStorage.getItem("data"));
 
-        for (id in data) {
+        for (let id in data) {
             $("input").each(function () {
                 if ($(this).data("id") == id) {
                     if (id == "outfit") {
@@ -670,7 +670,8 @@ function loadData() {
             });
 
             if (id == "expInput") {
-                for (i = 0; i < levels.length; i++) {
+                let lvl;
+                for (let i = 0; i < levels.length; i++) {
                     if (data[id] >= levels[i] && data[id] < levels[i + 1]) {
                         lvl = i + 1;
                     }
@@ -690,7 +691,7 @@ function loadData() {
     if (localStorage.getItem("collectionData") !== null) {
         var collectionData = JSON.parse(localStorage.getItem("collectionData"));
 
-        for (artefact in collectionData) {
+        for (let artefact in collectionData) {
             $(".minForCollections").each(function () {
                 if ($(this).data("artefact-collection") == artefact) {
                     if (collectionData[artefact]) {
@@ -704,7 +705,7 @@ function loadData() {
     if (localStorage.getItem("collectionListData") !== null) {
         var collectionData = JSON.parse(localStorage.getItem("collectionListData"));
 
-        for (collection in collectionData) {
+        for (let collection in collectionData) {
             $(".collection").each(function () {
                 if ($(this).data("collection") == collection) {
                     if (collectionData[collection]) {
