@@ -133,14 +133,16 @@ body {
     margin: 10px auto;
     text-align: center;
 }
+
 #potentialXPGain,
 #endXP,
 #endLvl {
     display: block;
 }
+
 #maxXP {
-		color: #aa0000;
-		display: none;
+    color: #aa0000;
+    display: none;
 }
 
 .minForCollections {
@@ -345,6 +347,30 @@ body {
 
 .material:not(.unneeded):hover {
     background-color: #BBB;
+}
+
+#export-import {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.export-import {
+    margin: 1em 0.1em;
+    width: max-content;
+    padding: 0.2em 0.4em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+input[type="search"] {
+    max-width: 100%;
 }
 
 @media screen and (max-width: 2200px) {

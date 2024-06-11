@@ -44,59 +44,64 @@
                 <span class="cell">Material</span>
                 <span class="cell">Needed (Total)</span>
             </div>
-        </div>
-    </div>
-
-    <div id="leftsidebar">
-        <div id="rsnLookup">
-            <label for="rsn" class="inline">RSN:</label>
-            <input name="rsn" id="rsn" data-id="rsn">
-            <button id="rsnConfirm" onClick="rsnConfirm()">Look up</button>
-        </div>
-        <p id="output"></p>
-        <div id="statform">
-            <label for="expInput" class="inline">Current XP:</label>
-            <input type="number" name="expInput" id="expInput" value="0" max="200000000" data-id="expInput" />
-
-            <span id="yourLevel">Level: 1</span>
-					<div class="statBox"><strong>XP Calculator:</strong></div>
-						<span id="maxXP" class="statBox">No more XP to gain for you.</span>
-						<div id="gains">
-							<div class="outfitbox">
-									<label for="outfit">Archaeologist Outfit: </label>
-									<input name="outfit" id="outfit" type="checkbox" data-id="outfit">
-							</div>
-							<span id="potentialXPGain" class="statBox">Total Potential XP: 0</span>
-							<span id="endXP" class="statBox">Ending XP: 0</span>
-							<span id="endLvl" class="statBox">Ending Level: 1</span>
-							</div>
-        </div>
-
-        <div style="text-align: center;">
-            <button id="reset" onClick="reset()">Reset artefact counts</button>
-        </div>
-
-        <div style="text-align: center; margin-top: 10px;">
-            <span>Search Artefacts</span>
-            <input type="search" id="searchBox">
-        </div>
-
-        <div id="collections">
 
         </div>
-    </div>
-    <div id="blinder">
-        <div id="popup">
-            <span>Material Storage</span>
-            <div id="materialStorage">
+        <div id="export-import">
+            <button id="export" class="export-import" onClick="exportData()">Export data</button>
+            <input type="file" id="importFile" accept=".json" onchange="importData()" style="display: none;">
+            <button class="export-import" onclick="document.getElementById('importFile').click()">Import
+                data</button>
+        </div>
+        <div id="leftsidebar">
+            <div id="rsnLookup">
+                <label for="rsn" class="inline">RSN:</label>
+                <input name="rsn" id="rsn" data-id="rsn">
+                <button id="rsnConfirm" onClick="rsnConfirm()">Look up</button>
+            </div>
+            <p id="output"></p>
+            <div id="statform">
+                <label for="expInput" class="inline">Current XP:</label>
+                <input type="number" name="expInput" id="expInput" value="0" max="200000000" data-id="expInput" />
 
+                <span id="yourLevel">Level: 1</span>
+                <div class="statBox"><strong>XP Calculator:</strong></div>
+                <span id="maxXP" class="statBox">No more XP to gain for you.</span>
+                <div id="gains">
+                    <div class="outfitbox">
+                        <label for="outfit">Archaeologist Outfit: </label>
+                        <input name="outfit" id="outfit" type="checkbox" data-id="outfit">
+                    </div>
+                    <span id="potentialXPGain" class="statBox">Total Potential XP: 0</span>
+                    <span id="endXP" class="statBox">Ending XP: 0</span>
+                    <span id="endLvl" class="statBox">Ending Level: 1</span>
+                </div>
             </div>
 
-            <div class="popupSave">
-                <button onclick="saveStorage();">Save Storage</button>
+            <div class="text-center">
+                <button id="reset" onClick="reset()">Reset artefact counts</button>
+            </div>
+
+            <div class="text-center mt-10">
+                <span>Search Artefacts</span>
+                <input type="search" id="searchBox">
+            </div>
+
+            <div id="collections">
+
             </div>
         </div>
-    </div>
+        <div id="blinder">
+            <div id="popup">
+                <span>Material Storage</span>
+                <div id="materialStorage">
+
+                </div>
+
+                <div class="popupSave">
+                    <button onclick="saveStorage();">Save Storage</button>
+                </div>
+            </div>
+        </div>
 
 </body>
 
