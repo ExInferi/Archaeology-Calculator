@@ -953,7 +953,7 @@ var recipes = [
     ], "Zarosian VII"),
     new Recipe("Funerary urn of miasma", 67, 3966.7, [
         new Material("Soapstone", 30),
-        new Material("Tyrian purple	", 14),
+        new Material("Tyrian purple", 14),
         new Material("Ancient vis", 20),
     ], "Zarosian VII"),
 ];
@@ -961,7 +961,7 @@ var recipes = [
 recipes.sort((a, b) => a.level - b.level);
 
 function getRecipeByArtefact(artefact) {
-    for (i = 0; i < recipes.length; i++) {
+    for (let i = 0; i < recipes.length; i++) {
         if (recipes[i].artefact == artefact) {
             return recipes[i];
         }
