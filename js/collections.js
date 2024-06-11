@@ -176,7 +176,7 @@ var collectionList = [
                 artefacts: [
                     "'The Pride of Padosan' painting",
                     "'Hallowed Be the Everlight' painting",
-                    "'The Lord of Light' painting",
+                    "'The Lord of Light' painting"
                 ]
             },
             {
@@ -244,16 +244,16 @@ var collectionList = [
                     "Ogre Kyzaj axe",
                     "Ork cleaver sword",
                     "Beastkeeper helm",
-                    "'Nosorog!' sculpture",
+                    "'Nosorog!' sculpture"
                 ]
             },
             {
                 display: "Red Rum Relics II - (110)",
                 artefacts: [
-                     "Ourg megahitter",
-                     "Ourg tower/goblin cower shield",
-                     "'Forged in War' sculpture",
-                     "Hobgoblin mansticker"
+                    "Ourg megahitter",
+                    "Ourg tower/goblin cower shield",
+                    "'Forged in War' sculpture",
+                    "Hobgoblin mansticker"
                 ]
             },
             {
@@ -425,15 +425,15 @@ var collectionList = [
             }
         ]
     }
-]
+];
 
 function createCollections() {
     for (i = 0; i < collectionList.length; i++) {
         var category = collectionList[i];
 
         if (["Zarosian", "Zamorakian", "Saradominist",
-              "Armadylean", "Bandosian", "Dragonkin"]
-              .includes(category.alignment)) {
+            "Armadylean", "Bandosian", "Dragonkin"]
+            .includes(category.alignment)) {
             for (x in category.collections) {
                 $(".artefact").each(function () {
                     if ($(this).hasClass(category.alignment) && $(this).hasClass(category.collections[x].number)) {
@@ -447,11 +447,11 @@ function createCollections() {
 
 function highlight(matchlist) {
     var matchlist = [matchlist].flat(); //wrap for single object case
-    $(".artefact").each(function() {
-        if(matchlist.includes($(this).data("artefact"))) {
+    $(".artefact").each(function () {
+        if (matchlist.includes($(this).data("artefact"))) {
             $(this).css("display", "table-row").addClass("highlight");
         } else {
-            if(!$(this).hasClass("highlight")) {
+            if (!$(this).hasClass("highlight")) {
                 $(this).css("display", "none");
             }
         }
@@ -466,13 +466,13 @@ function removeHighlights() {
 
 function highlightCollection(collection) {
     if (collection.startsWith("Museum - ")) {
-      collection = collection.substring(9);
+        collection = collection.substring(9);
     }
     removeHighlights();
 
-    for(i in collectionList) {
-        for(x in collectionList[i].collections) {
-            if(collectionList[i].collections[x].display == collection) {
+    for (i in collectionList) {
+        for (x in collectionList[i].collections) {
+            if (collectionList[i].collections[x].display == collection) {
                 highlight(collectionList[i].collections[x].artefacts);
             }
         }
