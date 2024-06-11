@@ -157,6 +157,21 @@ var collectionList = [
                 number: "IV",
                 display: "Dragonkin IV - (120)",
                 artefacts: []
+            },
+            {
+                number: "V",
+                display: "Dragonkin V - (77)",
+                artefacts: []
+            },
+            {
+                number: "VI",
+                display: "Dragonkin VI - (87)",
+                artefacts: []
+            },
+            {
+                number: "VII",
+                display: "Dragonkin VII - (113)",
+                artefacts: []
             }
         ]
     },
@@ -428,13 +443,13 @@ var collectionList = [
 ];
 
 function createCollections() {
-    for (i = 0; i < collectionList.length; i++) {
+    for (let i = 0; i < collectionList.length; i++) {
         var category = collectionList[i];
 
         if (["Zarosian", "Zamorakian", "Saradominist",
             "Armadylean", "Bandosian", "Dragonkin"]
             .includes(category.alignment)) {
-            for (x in category.collections) {
+            for (let x in category.collections) {
                 $(".artefact").each(function () {
                     if ($(this).hasClass(category.alignment) && $(this).hasClass(category.collections[x].number)) {
                         category.collections[x].artefacts.push($(this).data("artefact"));
@@ -470,8 +485,8 @@ function highlightCollection(collection) {
     }
     removeHighlights();
 
-    for (i in collectionList) {
-        for (x in collectionList[i].collections) {
+    for (let i in collectionList) {
+        for (let x in collectionList[i].collections) {
             if (collectionList[i].collections[x].display == collection) {
                 highlight(collectionList[i].collections[x].artefacts);
             }
