@@ -539,12 +539,12 @@ function calculateTotalPotentialXP() {
     }
 
     if (lvl === 126) {
-        $("#endLvl").text("Ending Level: " + lvl + " (" + numberWithCommas(parseInt(remainingXP)) + " XP to Max )");
+        $("#endLvl").text("Ending Level: " + lvl + " (" + numberWithCommas(parseInt(remainingXP)) + " to Max )");
     }
     else if (remainingXP <= 1) {
         $("#endLvl").text("Ending Level: Max");
     } else {
-        $("#endLvl").text("Ending Level: " + lvl + " (" + numberWithCommas(parseInt(remainingXP)) + " XP to Level " + parseInt(lvl + 1) + ")");
+        $("#endLvl").text("Ending Level: " + lvl + " (" + numberWithCommas(parseInt(remainingXP)) + " to " + parseInt(lvl + 1) + ")");
     };
 
 
@@ -680,7 +680,7 @@ function loadData() {
                     lvl = 'Max';
                     $("#expInput").val('200000000');
                 };
-                $("#yourLevel").text("Level: " + lvl);
+                $("#yourLevel").text("Level " + lvl);
 
             }
         }
@@ -756,3 +756,35 @@ function saveStorage() {
 function showMaterialStorage() {
     $("#blinder").css("display", "block");
 };
+
+function exportData() {
+    var localStorageData = JSON.stringify(localStorage);
+    var blob = new Blob([localStorageData], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+
+    var downloadLink = document.createElement('a');
+    downloadLink.href = url;
+    downloadLink.download = 'archaeology-calculator.json';
+
+    downloadLink.style.display = 'none';
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
+
+function importData() {
+    var fileInput = document.getElementById('importFile');
+    var file = fileInput.files[0];
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+        var localStorageData = JSON.parse(e.target.result);
+        Object.keys(localStorageData).forEach(function (k) {
+            localStorage.setItem(k, localStorageData[k]);
+        });
+    };
+
+    reader.readAsText(file);
+    location.reload();
+}
