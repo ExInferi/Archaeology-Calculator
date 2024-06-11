@@ -157,6 +157,21 @@ var collectionList = [
                 number: "IV",
                 display: "Dragonkin IV - (120)",
                 artefacts: []
+            },
+            {
+                number: "V",
+                display: "Dragonkin V - (77)",
+                artefacts: []
+            },
+            {
+                number: "VI",
+                display: "Dragonkin VI - (87)",
+                artefacts: []
+            },
+            {
+                number: "VII",
+                display: "Dragonkin VII - (113)",
+                artefacts: []
             }
         ]
     },
